@@ -1,12 +1,15 @@
 * {
-    background-color: #282828;
-    color: #ebdbb2;
-    font-weight: bold;
 }
 
 body {
+    background-color: #fbf1c7;
+    color: #3c3836;
+    font-weight: bold;
     margin: 0;
-    padding-top: 70px; /* adjust to navbar height */
+    padding-top: 70px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 .navbar {
@@ -32,16 +35,41 @@ body {
 .nav-links a {
     padding: 0.5rem 1rem;
     border-radius: 5px;
+    color: #3c3836;
     transition: background-color 0.3s ease;
 }
 
 .nav-links a:hover {
-    background-color: #fb4934;
+    background-color: #cc241d;
 }
 
 .nav-links a.active {
-    color: #ebdbb2;
-    background-color: #fb4934;
+    color: #3c3836;
+    background-color: #cc241d;
     border-radius: 5px;
     padding: 0.5rem 1rem;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #cc241d;
+    color: #3c3836;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode {
+    background-color: #282828;
+    color: #ebdbb2;
+}
+
+body.dark-mode a {
+    color: #ebdbb2;
 }
